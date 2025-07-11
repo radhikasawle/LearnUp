@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solution - LearnUp</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Add this line -->
+</head>
+<body>
+  <header>
+    <div class="logo">LearnUp</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="challenges.html">Challenges</a>
+    </nav>
+  </header>
+
+  <section class="solution-section">
+    <h2 id="solutionTitle">Solution</h2>
+
+    <label for="languageSelect">Language:</label>
+    <select id="languageSelect">
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+      <option value="cpp">C++</option>
+      <option value="python">Python</option>
+      <option value="c">C</option>
+    </select>
+
+    <pre><code id="solutionCode"></code></pre>
+
+    <h3>Explanation</h3>
+    <p id="solutionDescription">Select a language to see explanation.</p>
+  </section>
+
+  <script>
+    // Get challenges array and selected index from localStorage
+    const challenges = JSON.parse(localStorage.getItem('challengesData')) || [];
+    const index = Number(localStorage.getItem('selectedChallengeIndex'));
+
+    const solutionTitle = document.getElementById('solutionTitle');
+    const languageSelect = document.getElementById('languageSelect');
+    const solutionCode = document.getElementById('solutionCode');
+    const solutionDescription = document.getElementById('solutionDescription');
+
+    const explanations = {
+      javascript: "JavaScript solution uses native features like recursion, array methods, or closure for simple logic.",
+      java: "Java solution uses OOP principles, recursion, helper methods, and standard Java utilities.",
+      cpp: "C++ solution applies pointers, recursion, and STL containers like vector or string.",
+      python: "Python version uses concise syntax, recursion, and built-in language features.",
+      c: "C solution handles logic manually with pointers, arrays, and basic data structures."
+    };
+
+    // If no valid challenge data, show error message
+    if (challenges.length === 0 || isNaN(index) || !challenges[index]) {
+      solutionTitle.textContent = "Challenge Not Found";
+      solutionCode.textContent = "No challenge data available.";
+      solutionDescription.textContent = "No explanation available.";
+      languageSelect.style.display = 'none';
+    } else {
+      const challenge = challenges[index];
+
+      function renderSolution(language) {
+        const code = challenge.solutions[language];
+        solutionCode.textContent = code || "Solution not available in this language.";
+        solutionDescription.textContent = explanations[language] || "Explanation not available for this language.";
+      }
+
+      solutionTitle.textContent = challenge.title;
+      renderSolution(languageSelect.value);
+
+      languageSelect.addEventListener('change', (e) => {
+        renderSolution(e.target.value);
+      });
+    }
+  </script>
+</body>
+</html>

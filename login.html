@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | LearnUp</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">LearnUp</div>
+        <nav>
+            <a href="index.html">Home</a>
+          <a href="login.html">Login</a>
+      <a href="challenges.html">Challenges</a>
+       <a href="leaderboard.html">leaderboard</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-box">
+            <h2>Welcome Back</h2>
+            <p>Log in to continue your coding journey</p>
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required />
+                <div class="password-hint">
+                    <small>
+                        Password must be at least 8 characters, include an uppercase letter, a number, and a special
+                        character.
+                    </small>
+                </div>
+
+                <div id="login-error" class="error-message" style="display:none;"></div>
+
+
+                <button type="submit">Login</button>
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
+            </form>
+         </div>
+    </section>
+
+    <footer>
+        <p>© 2025 LearnUp. Empowering future coders — one challenge at a time.</p>
+    </footer>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

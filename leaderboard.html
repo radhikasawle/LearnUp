@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LearnUp - Crack the Code</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">LearnUp</div>
+    <nav>
+      <a href="index.html">Home</a>
+       <a href="leaderboard.html">Leaderboard</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="leaderboard-section">
+    <h2>Leaderboard</h2>
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>User</th>
+          <th>Points</th>
+          <th>Challenges Solved</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <!-- Leaderboard data -->
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    const leaderboard = [
+      { name: "Alice", points: 300, solved: 15 },
+      { name: "Bob", points: 270, solved: 13 },
+      { name: "Charlie", points: 250, solved: 12 },
+      { name: "Dave", points: 220, solved: 10 }
+    ];
+
+    const tbody = document.getElementById("leaderboardBody");
+
+    leaderboard.forEach((user, index) => {
+      tbody.innerHTML += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${user.name}</td>
+          <td>${user.points}</td>
+          <td>${user.solved}</td>
+        </tr>
+      `;
+    });
+  </script>
+</body>
+</html>
