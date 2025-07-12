@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoostUp - Crack the Code</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">BoostUp</div>
+    <nav>
+          <a href="index.html">Home</a>
+            <a href="leaderboard.html">Leaderboard</a>
+                <a href="challenges.html">Challenges</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+      <p>Practice coding. Get hired. Shake the tech world.</p>
+      <button id="getStartedBtn" class="btn">Get Started</button>
+</div>
+    <div class="hero-code">
+      <pre>
+<code>
+function quakeCode(level) {
+  if(level === 'pro') {
+    console.log("You're ready for the challenge!");
+  } else {
+    console.log(" Keep practicing!");
+  }
+}
+quakeCode('pro');
+</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Featured Challenges</h2>
+  
+    <div class="cards">
+  <div class="card">
+    <h3>Binary Trees</h3>
+    <p>Master tree traversal and balancing techniques.</p>
+  </div>
+  <div class="card">
+    <h3>Dynamic Programming</h3>
+    <p>Break down complex problems into optimal subproblems.</p>
+  </div>
+  <div class="card">
+    <h3>Algorithms Race</h3>
+    <p>Time-bound problems to simulate real interview pressure.</p>
+  </div>
+  <div class="card">
+    <h3>Graph Theory</h3>
+    <p>Explore DFS, BFS, shortest paths, and graph traversals.</p>
+  </div>
+  <div class="card">
+    <h3>Greedy Algorithms</h3>
+    <p>Solve problems using locally optimal strategies.</p>
+  </div>
+  <div class="card">
+    <h3>Recursion</h3>
+    <p>Understand and apply recursive thinking to solve problems.</p>
+  </div>
+  <div class="card">
+    <h3>SQL Practice</h3>
+    <p>Query complex datasets and sharpen your database skills.</p>
+  </div>
+  <div class="card">
+    <h3>Code Golf</h3>
+    <p>Solve challenges using the fewest characters possible.</p>
+  </div>
+  <div class="card">
+    <h3>Real-World Systems</h3>
+    <p>Simulate load balancers, schedulers, and distributed design.</p>
+  </div>
+    <div class="card">
+    <h3>Pointers Practice</h3>
+    <p>Solve challenges through balancing coding.</p>
+  </div>
+</div>
+  </section>
+
+    </table>
+<div id="challengeDetails">
+  <h3 id="detailTitle"></h3>
+  <p id="detailDescription"></p>
+  <h4 id="questionsTitle" style="display:none;">Questions:</h4>
+  <ul id="questionList"></ul>
+</div>
+
+  </section>
+
+  <section id="leaderboardSection">
+    <table>
+      <tbody id="leaderboardBody"></tbody>
+    </table>
+  </section>
+
+  <footer>
+  <div class="footer-content">
+    <p>© 2025 LearnUp. Built to help you crack the code and land your dream job.</p>
+   <div class="footer-links">
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script>
+  document.getElementById("getStartedBtn").addEventListener("click", function () {
+    window.location.href = "signup.html";
+  });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | LearnUp</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">LearnUp</div>
+        <nav>
+            <a href="index.html">Home</a>
+               <a href="login.html">Login</a>
+      <a href="challenges.html">Challenges</a>
+                <a href="leaderboard.html">Leaderboard </a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-box">
+            <h2>Create Account</h2>
+            <p>Join LearnUp and crack your way into tech!</p>
+
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="yourusername" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required />
+                <div class="password-checklist">
+                    <ul>
+                        <li id="length">❌ At least 8 characters</li>
+                        <li id="uppercase">❌ One uppercase letter (A–Z)</li>
+                        <li id="number">❌ One number (0–9)</li>
+                        <li id="special">❌ One special character (!@#$...)</li>
+                    </ul>
+                </div>
+
+
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="••••••••" required />
+
+                <button type="submit">Sign Up</button>
+                <div class="login-footer">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 LearnUp. Empowering future coders — one challenge at a time.</p>
+    </footer>
+
+    <!-- Success Modal -->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close-btn">&times;</span>
+
+        <div class="modal-icon">
+            <svg class="checkmark-icon" width="64" height="64" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#00ff88" stroke-width="2" fill="#0f0f0f" />
+                <path d="M7 13l3 3 7-7" stroke="#00ff88" stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <h2>Signup Successful!</h2>
+        <p>You're all set. Login to get started!</p>
+        <button id="modal-login-btn">🚀 Go to Login</button>
+    </div>
+</div>
+
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+
+</html>

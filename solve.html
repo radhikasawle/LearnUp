@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solve Challenge - LearnUp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">LearnUp</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="challenges.html">Challenges</a>
+    </nav>
+  </header>
+
+  <section class="editor-section">
+    <h2 id="challengeTitle">Solve Challenge</h2>
+    <p id="challengeDescription"></p>
+    <textarea id="codeEditor" placeholder="// Write your solution here..."></textarea>
+    <br />
+    <button onclick="window.location.href='solution.html'">Get Solution</button>
+  </section>
+
+  <script>
+    const challenges = JSON.parse(localStorage.getItem('challengesData'));
+    const index = localStorage.getItem('selectedChallengeIndex');
+    const challenge = challenges ? challenges[index] : null;
+
+    if (challenge) {
+      document.getElementById('challengeTitle').textContent = challenge.title;
+      document.getElementById('challengeDescription').textContent = challenge.description;
+    }
+  </script>
+</body>
+</html>
