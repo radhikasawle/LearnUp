@@ -32,4 +32,4 @@ Email: radhikasawle504@gmail.com
 [LinkedIn](https://www.linkedin.com/in/radhika-sawle-915932333) 
 
 Feel free to star the repo if you like the project!
-https://github.com/radhikasawle/learnup.git
+https://github.com/radhikasawle/LearnUp.git
